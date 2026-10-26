@@ -1,0 +1,60 @@
+{
+  "project_name": "Jinjiang v3 smoke test",
+  "data_dir": "data/raw",
+  "results_dir": "results/smoke",
+  "frequency": "4h",
+  "target_station": "C",
+  "targets": ["DO"],
+  "target_default_windows": {"DO": 6, "NH3N": 6, "CODMN": 6, "TP": 6},
+  "window_grid": [6, 12],
+  "forecast_horizon_steps": 2,
+  "baseline_lookback_steps": 6,
+  "split": {
+    "train_fraction": 0.70,
+    "validation_fraction": 0.15,
+    "rolling_folds": 2
+  },
+  "rolling": {
+    "initial_train_fraction": 0.50,
+    "validation_fraction": 0.10,
+    "folds": 2
+  },
+  "missing_data": {
+    "max_water_gap_steps": 3,
+    "max_weather_gap_hours": 12,
+    "interpolation_policy": "causal_ffill",
+    "timestamp_snap_tolerance": "2h15min"
+  },
+  "training": {
+    "seeds": [42],
+    "hidden_size": 16,
+    "num_layers": 1,
+    "dropout": 0.0,
+    "batch_size": 64,
+    "max_epochs": 2,
+    "patience": 1,
+    "learning_rate": 0.001,
+    "device": "cpu",
+    "deterministic": "strict"
+  },
+  "diagnostic_model": "lstm",
+  "baseline_models": ["ridge"],
+  "forecastability": {
+    "minimum_R2": 0.0,
+    "minimum_MAE_skill_vs_best_naive": 0.0
+  },
+  "bootstrap": {
+    "block_length_steps": 6,
+    "replicates": 100,
+    "seed": 2026
+  },
+  "interpretability": {
+    "enabled": false,
+    "experiment": "04_meteorology",
+    "feature_set": "all_stations_weather_rain_lags",
+    "model": "lstm",
+    "seed": 42,
+    "background_samples": 16,
+    "explanation_samples": 16
+  }
+}

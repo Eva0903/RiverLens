@@ -1,0 +1,22 @@
+{
+  "protocol": "kernel_shap_whole_history_31players_v1",
+  "interpretation_dir": "results/interpretation_random/06_interpretation_random",
+  "results_dir": "results/shap_kernel_standalone",
+  "targets": [
+    "DO",
+    "NH3N",
+    "CODMN",
+    "TP"
+  ],
+  "model_seed": 42,
+  "device": "cuda",
+  "background_seeds": [
+    2026,
+    3407,
+    99
+  ],
+  "background_samples": 64,
+  "kernel_nsamples": 512,
+  "kernel_seed": 2026,
+  "coalition_batch": 4
+}

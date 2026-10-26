@@ -1,0 +1,41 @@
+{
+  "project_name": "06 post-hoc interpretation: zero-training overview and optional fixed-model recovery",
+  "interpretation_protocol": "weather_interpretation_fixed_models_v1",
+  "data_dir": "data/raw",
+  "source_04_dir": "results/meteorology_random_gpu/04_meteorology",
+  "source_05_dir": "results/station_rotation_random_gpu/05_robustness",
+  "results_dir": "results/interpretation_random",
+  "cases": [
+    {
+      "station": "C",
+      "target": "DO"
+    },
+    {
+      "station": "C",
+      "target": "NH3N"
+    },
+    {
+      "station": "C",
+      "target": "TP"
+    },
+    {
+      "station": "C",
+      "target": "CODMN"
+    },
+    {
+      "station": "A",
+      "target": "CODMN"
+    },
+    {
+      "station": "B",
+      "target": "CODMN"
+    }
+  ],
+  "interpretation_seeds": [
+    42
+  ],
+  "permutation_repeats": 10,
+  "permutation_seed": 2026,
+  "min_stratum_origins": 15,
+  "automatic_replay": false
+}

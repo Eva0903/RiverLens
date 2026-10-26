@@ -1,0 +1,73 @@
+{
+  "project_name": "Jinjiang residual LSTM upgrade v4 smoke test",
+  "data_dir": "data/raw",
+  "results_dir": "results/smoke_lstm_v4",
+  "frequency": "4h",
+  "target_station": "C",
+  "targets": ["DO"],
+  "forecast_horizon_steps": 2,
+  "split": {
+    "train_fraction": 0.70,
+    "validation_fraction": 0.15
+  },
+  "missing_data": {
+    "max_water_gap_steps": 3,
+    "max_weather_gap_hours": 12,
+    "interpolation_policy": "causal_ffill",
+    "timestamp_snap_tolerance": "2h15min"
+  },
+  "training": {
+    "seeds": [42],
+    "hidden_size": 16,
+    "num_layers": 1,
+    "dropout": 0.0,
+    "batch_size": 64,
+    "max_epochs": 3,
+    "patience": 2,
+    "learning_rate": 0.001,
+    "device": "auto",
+    "deterministic": "strict"
+  },
+  "lstm_upgrade": {
+    "selection_only": false,
+    "selection_seed": 42,
+    "final_seeds": [42],
+    "candidate_feature_sets": ["local_target", "cross_station_target"],
+    "candidate_windows_by_target": {
+      "DO": [6, 18]
+    },
+    "candidate_model_configs": [
+      {
+        "hidden_size": 16,
+        "num_layers": 1,
+        "dropout": 0.0,
+        "bidirectional": false
+      }
+    ],
+    "append_first_differences": true,
+    "append_calendar_features": true,
+    "selection_training": {
+      "max_epochs": 3,
+      "patience": 2,
+      "loss": "huber",
+      "huber_beta": 1.0,
+      "weight_decay": 0.0001,
+      "gradient_clip_norm": 1.0,
+      "gate_grid_size": 21
+    },
+    "final_training": {
+      "max_epochs": 3,
+      "patience": 2,
+      "loss": "huber",
+      "huber_beta": 1.0,
+      "weight_decay": 0.0001,
+      "gradient_clip_norm": 1.0,
+      "gate_grid_size": 21
+    }
+  },
+  "bootstrap": {
+    "block_length_steps": 6,
+    "replicates": 100,
+    "seed": 2026
+  }
+}

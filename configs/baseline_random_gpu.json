@@ -1,0 +1,100 @@
+{
+  "project_name": "Jinjiang 01 eight-model random-window holdout baseline",
+  "data_dir": "data/raw",
+  "results_dir": "results/baseline_random_gpu",
+  "frequency": "4h",
+  "target_station": "C",
+  "targets": [
+    "DO",
+    "NH3N",
+    "CODMN",
+    "TP"
+  ],
+  "target_default_windows": {
+    "DO": 30,
+    "NH3N": 48,
+    "CODMN": 48,
+    "TP": 66
+  },
+  "window_grid": [
+    6,
+    12,
+    18,
+    24,
+    30,
+    36,
+    42,
+    48,
+    54,
+    60,
+    66,
+    72,
+    78,
+    84
+  ],
+  "forecast_horizon_steps": 6,
+  "baseline_lookback_steps": 18,
+  "split": {
+    "train_fraction": 0.8,
+    "validation_fraction": 0.1,
+    "rolling_folds": 3
+  },
+  "rolling": {
+    "initial_train_fraction": 0.5,
+    "validation_fraction": 0.1,
+    "folds": 3
+  },
+  "missing_data": {
+    "max_water_gap_steps": 3,
+    "max_weather_gap_hours": 12,
+    "interpolation_policy": "causal_ffill",
+    "timestamp_snap_tolerance": "2h15min"
+  },
+  "training": {
+    "seeds": [
+      42,
+      2026,
+      3407,
+      7,
+      99
+    ],
+    "hidden_size": 64,
+    "num_layers": 2,
+    "dropout": 0.1,
+    "batch_size": 32,
+    "max_epochs": 256,
+    "patience": 15,
+    "learning_rate": 0.001,
+    "device": "cuda",
+    "deterministic": "strict"
+  },
+  "diagnostic_model": "lstm",
+  "baseline_models": [
+    "ridge",
+    "ann",
+    "cnn",
+    "rnn",
+    "lstm",
+    "transformer"
+  ],
+  "forecastability": {
+    "minimum_R2": 0.0,
+    "minimum_MAE_skill_vs_best_naive": 0.0
+  },
+  "bootstrap": {
+    "block_length_steps": 6,
+    "replicates": 2000,
+    "seed": 2026
+  },
+  "interpretability": {
+    "enabled": false,
+    "experiment": "04_meteorology",
+    "feature_set": "all_stations_weather_rain_lags",
+    "model": "lstm",
+    "seed": 42,
+    "background_samples": 128,
+    "explanation_samples": 256
+  },
+  "baseline_protocol": "random_window_holdout_80_10_10_v1",
+  "split_seed": 42
+}
