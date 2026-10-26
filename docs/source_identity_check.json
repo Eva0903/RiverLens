@@ -1,0 +1,95 @@
+[
+  {
+    "result_archive": "03_window_horizon.zip",
+    "checked_files": 8,
+    "all_match": true,
+    "per_file": {
+      "window_horizon_random.py": true,
+      "baseline_random.py": true,
+      "baseline_within_split.py": true,
+      "data.py": true,
+      "models.py": true,
+      "runner.py": true,
+      "evaluation.py": true,
+      "config.py": true
+    }
+  },
+  {
+    "result_archive": "window_horizon_random_budget1024_gpu.zip",
+    "checked_files": 8,
+    "all_match": true,
+    "per_file": {
+      "window_horizon_random.py": true,
+      "baseline_random.py": true,
+      "baseline_within_split.py": true,
+      "data.py": true,
+      "models.py": true,
+      "runner.py": true,
+      "evaluation.py": true,
+      "config.py": true
+    }
+  },
+  {
+    "result_archive": "window_horizon_diagnostic_cap_gpu.zip",
+    "checked_files": 8,
+    "all_match": true,
+    "per_file": {
+      "window_horizon_random.py": true,
+      "baseline_random.py": true,
+      "baseline_within_split.py": true,
+      "data.py": true,
+      "models.py": true,
+      "runner.py": true,
+      "evaluation.py": true,
+      "config.py": true
+    }
+  },
+  {
+    "result_archive": "meteorology_random_gpu.zip",
+    "checked_files": 8,
+    "all_match": true,
+    "per_file": {
+      "meteorology_random.py": true,
+      "baseline_random.py": true,
+      "baseline_within_split.py": true,
+      "runner.py": true,
+      "data.py": true,
+      "models.py": true,
+      "evaluation.py": true,
+      "config.py": true
+    }
+  },
+  {
+    "result_archive": "station_rotation_random_gpu.zip",
+    "checked_files": 9,
+    "all_match": true,
+    "per_file": {
+      "meteorology_random.py": true,
+      "baseline_random.py": true,
+      "baseline_within_split.py": true,
+      "runner.py": true,
+      "data.py": true,
+      "models.py": true,
+      "evaluation.py": true,
+      "config.py": true,
+      "station_rotation_random.py": true
+    }
+  },
+  {
+    "result_archive": "06_interpretation_random.zip",
+    "checked_files": 10,
+    "all_match": true,
+    "per_file": {
+      "meteorology_random.py": true,
+      "baseline_random.py": true,
+      "baseline_within_split.py": true,
+      "runner.py": true,
+      "data.py": true,
+      "models.py": true,
+      "evaluation.py": true,
+      "config.py": true,
+      "station_rotation_random.py": true,
+      "interpretation_random.py": true
+    }
+  }
+]

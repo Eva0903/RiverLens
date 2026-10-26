@@ -1,0 +1,211 @@
+[
+  {
+    "archive": "Jinjiang_LSTM_Upgrade_V4.zip",
+    "sha256": "7b9b1110f6f471c9c96ce515de27256e0b5beca3761f31a74d6364f64856292e",
+    "copied_paths": [
+      "docs/history/CHANGELOG.md",
+      "configs/lstm_upgrade_paper.json",
+      "configs/lstm_upgrade_select.json",
+      "configs/lstm_upgrade_smoke.json",
+      "configs/paper.json",
+      "configs/smoke.json",
+      "configs/smoke_cuda.json",
+      "experiments/01_baseline.py",
+      "experiments/02_station_ablation.py",
+      "experiments/03_window_horizon.py",
+      "experiments/04_meteorology.py",
+      "experiments/05_robustness.py",
+      "experiments/06_lstm_upgrade.py",
+      "experiments/run_all.py",
+      "experiments/_entry.py",
+      "docs/history/EXPERIMENT_DESIGN.md",
+      "pyproject.toml",
+      "docs/history/README.md",
+      "requirements.txt",
+      "setup_macos_linux.sh",
+      "setup_windows.ps1",
+      "src/jinjiang/cli.py",
+      "src/jinjiang/config.py",
+      "src/jinjiang/data.py",
+      "src/jinjiang/evaluation.py",
+      "src/jinjiang/lstm_upgrade.py",
+      "src/jinjiang/models.py",
+      "src/jinjiang/plots.py",
+      "src/jinjiang/runner.py",
+      "src/jinjiang/__init__.py",
+      "tests/test_data_pipeline.py",
+      "docs/history/UPGRADE_FROM_V2.md",
+      "docs/history/UPGRADE_FROM_V3.md",
+      "docs/history/VERIFICATION.md"
+    ]
+  },
+  {
+    "archive": "Jinjiang_V4_DO_Ablation_Addon.zip",
+    "sha256": "71f4c75525d527c0f22dbb2f140efbfa8fa307dba92785af711115b91d9a4fa5",
+    "copied_paths": [
+      "historical/do_upstream_ablation/DO_ABLATION_VERIFICATION.md",
+      "historical/do_upstream_ablation/README_DO_ABLATION.md",
+      "historical/do_upstream_ablation/experiments/07_do_upstream_ablation.py",
+      "historical/do_upstream_ablation/tests/test_do_ablation.py",
+      "historical/do_upstream_ablation/configs/do_upstream_ablation.json",
+      "historical/do_upstream_ablation/configs/do_upstream_ablation_smoke.json",
+      "historical/do_upstream_ablation/src/jinjiang/do_ablation.py",
+      "historical/do_upstream_ablation/src/jinjiang/models.py"
+    ]
+  },
+  {
+    "archive": "Jinjiang_V4_Baseline_Within_Split_Patch.zip",
+    "sha256": "eb77554260fe4a99d39548fbccd3a8303da98e4f4c2743febe1f6a5f75974dc0",
+    "copied_paths": [
+      "docs/history/README_01_WITHIN_SPLIT.md",
+      "docs/history/VERIFICATION_01_WITHIN_SPLIT.md",
+      "configs/baseline_within_split_gpu.json",
+      "configs/baseline_within_split_smoke_gpu.json",
+      "experiments/01_baseline.py",
+      "src/jinjiang/baseline_within_split.py",
+      "src/jinjiang/runner.py",
+      "tests/test_baseline_within_split.py"
+    ]
+  },
+  {
+    "archive": "Jinjiang_V4_Random_Baseline_Addon.zip",
+    "sha256": "f36c4db3cfa5d4e10c31677ad00d99e9eb6a4539fb75645ea46c8e7905ab2b7f",
+    "copied_paths": [
+      "docs/history/README_01_RANDOM.md",
+      "configs/baseline_random_gpu.json",
+      "configs/baseline_random_smoke_gpu.json",
+      "experiments/01_baseline_random.py",
+      "src/jinjiang/baseline_random.py",
+      "tests/test_baseline_random.py"
+    ]
+  },
+  {
+    "archive": "Jinjiang_V4_02_Random_Station_Patch.zip",
+    "sha256": "293e58eeac273a9961d4d978f3d3fead01f2beec215936cb24a2c52da8142220",
+    "copied_paths": [
+      "docs/history/README_02_RANDOM.md",
+      "configs/station_ablation_random_gpu.json",
+      "configs/station_ablation_random_smoke_gpu.json",
+      "experiments/02_station_ablation.py",
+      "src/jinjiang/station_ablation_random.py",
+      "tests/test_station_ablation_random.py"
+    ]
+  },
+  {
+    "archive": "Jinjiang_V4_03_Window_Horizon_Patch.zip",
+    "sha256": "719f23cf6a76a936e2eec99ebce5a06d7b837ca94710457fa11b6c81ffb15f09",
+    "copied_paths": [
+      "docs/history/README_03_RANDOM.md",
+      "configs/window_horizon_random_long_gpu.json",
+      "configs/window_horizon_random_main_gpu.json",
+      "configs/window_horizon_random_smoke_gpu.json",
+      "experiments/03_window_horizon.py",
+      "src/jinjiang/window_horizon_random.py",
+      "tests/test_window_horizon_random.py"
+    ]
+  },
+  {
+    "archive": "Jinjiang_V4_03_Training_Diagnostics_Patch.zip",
+    "sha256": "598d6db86204ae34950129bab29c2a8038ef16262fff28322695fa9d49494a24",
+    "copied_paths": [
+      "docs/history/README_03_TRAINING_DIAGNOSTICS.md",
+      "experiments/03_training_diagnostics.py",
+      "configs/window_training_patience_gpu.json",
+      "configs/window_training_cap_gpu.json",
+      "tests/test_window_training_diagnostics.py",
+      "src/jinjiang/window_training_diagnostics.py"
+    ]
+  },
+  {
+    "archive": "Jinjiang_V4_04_Random_Meteorology_Patch.zip",
+    "sha256": "dc1eef2be4f873e41c7148fee17057f06f28e3e83dc29ea15d08d750b852187f",
+    "copied_paths": [
+      "docs/history/README_04_RANDOM.md",
+      "configs/meteorology_random_gpu.json",
+      "configs/meteorology_random_smoke_gpu.json",
+      "experiments/04_meteorology_random.py",
+      "src/jinjiang/meteorology_random.py",
+      "tests/test_meteorology_random.py"
+    ]
+  },
+  {
+    "archive": "Jinjiang_04_Rainfall_Lag_Three_Checks.zip",
+    "sha256": "c9a38633a2449c618b131baaef99745d77fbf302d07987b3bc7140122f2e0d46",
+    "copied_paths": [
+      "docs/history/README_降雨时滞三项检查.md",
+      "experiments/04_event_phase_analysis.py",
+      "tests/test_event_phase_analysis.py"
+    ]
+  },
+  {
+    "archive": "Jinjiang_04_Rain_Dry_Stratified_Analysis.zip",
+    "sha256": "34b8c466b0726d59dcae3f043529a47f0e3571d7810116ddb440d15964240346",
+    "copied_paths": [
+      "docs/history/README_RAIN_DRY.md",
+      "experiments/04_rain_dry_analysis.py"
+    ]
+  },
+  {
+    "archive": "Jinjiang_V4_05_Random_Station_Rotation_Patch.zip",
+    "sha256": "ede93215a9f9cac2333bb8727a124af3e39375b54574c0fc46c08071a3113ad2",
+    "copied_paths": [
+      "docs/history/README_05_RANDOM.md",
+      "configs/station_rotation_random_gpu.json",
+      "configs/station_rotation_random_smoke_gpu.json",
+      "experiments/05_station_rotation_random.py",
+      "run_05_station_rotation.ps1",
+      "src/jinjiang/station_rotation_random.py",
+      "tests/test_station_rotation_random.py"
+    ]
+  },
+  {
+    "archive": "Jinjiang_V4_06_Random_Residual_Patch.zip",
+    "sha256": "ca7c150e4ef7f82cc3bd46328137197ed40b7ca6481ab207c2f3bede37f84ac6",
+    "copied_paths": [
+      "docs/history/README_06_RANDOM.md",
+      "configs/residual_random_gpu.json",
+      "configs/residual_random_smoke_gpu.json",
+      "experiments/06_residual_random.py",
+      "run_06_residual_random.ps1",
+      "src/jinjiang/residual_random.py",
+      "tests/test_residual_random.py"
+    ]
+  },
+  {
+    "archive": "Jinjiang_V4_06_Interpretation_Patch.zip",
+    "sha256": "55e18c883942a52c7d171d874cd4bb578b5acd1124d5a20b55dc65bb1f529308",
+    "copied_paths": [
+      "docs/history/README_06_INTERPRETATION.md",
+      "configs/interpretation_random.json",
+      "experiments/06_interpretation_random.py",
+      "run_06_interpretation.ps1",
+      "src/jinjiang/interpretation_random.py",
+      "tests/test_interpretation_random.py"
+    ]
+  },
+  {
+    "archive": "Jinjiang_06_Inference_Precision_Fix.zip",
+    "sha256": "3cdec0432c3b1f065ffc7e455770b9fdd3ac0193c028eceb2500155153bceb39",
+    "copied_paths": [
+      "docs/history/README_FIX.md",
+      "experiments/06_interpretation_precision_fix.py",
+      "run_06_interpretation_fix.ps1",
+      "src/jinjiang/interpretation_precision_fix.py",
+      "tests/test_interpretation_precision_fix.py"
+    ]
+  },
+  {
+    "archive": "Jinjiang_07_KernelSHAP_Standalone.zip",
+    "sha256": "f8e35f41ae7572e9b12a7ebf3a248376f904fdcab89e2fd6f6a1fd8bbe13a030",
+    "copied_paths": [
+      "docs/history/README_07_KERNEL.md",
+      "docs/history/VALIDATION_KERNEL.md",
+      "configs/shap_kernel.json",
+      "experiments/07_shap_kernel.py",
+      "run_07_shap_kernel.ps1",
+      "src/jinjiang/shap_kernel_common.py",
+      "src/jinjiang/shap_kernel_supplement.py",
+      "tests/test_shap_kernel_supplement.py"
+    ]
+  }
+]

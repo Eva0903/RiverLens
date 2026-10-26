@@ -1,0 +1,68 @@
+{
+  "data_dir": "data/raw",
+  "frequency": "4h",
+  "target_station": "C",
+  "forecast_horizon_steps": 6,
+  "split": {
+    "train_fraction": 0.7,
+    "validation_fraction": 0.15
+  },
+  "missing_data": {
+    "max_water_gap_steps": 3,
+    "max_weather_gap_hours": 12,
+    "interpolation_policy": "causal_ffill",
+    "timestamp_snap_tolerance": "2h15min"
+  },
+  "bootstrap": {
+    "block_length_steps": 6,
+    "replicates": 2000,
+    "seed": 2026
+  },
+  "project_name": "Fixed DO upstream information ablation",
+  "targets": [
+    "DO"
+  ],
+  "results_dir": "results/do_upstream_ablation",
+  "training": {
+    "seeds": [
+      42,
+      2026,
+      3407,
+      7,
+      99
+    ],
+    "hidden_size": 32,
+    "num_layers": 1,
+    "dropout": 0.1,
+    "batch_size": 64,
+    "max_epochs": 96,
+    "patience": 12,
+    "learning_rate": 0.001,
+    "device": "auto",
+    "deterministic": "strict",
+    "loss": "huber",
+    "huber_beta": 1.0,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "lr_factor": 0.5,
+    "lr_patience": 4,
+    "minimum_learning_rate": 1e-05,
+    "gate_grid_size": 21,
+    "bidirectional": false
+  },
+  "do_ablation": {
+    "lookback_steps": 6,
+    "arms": [
+      "local_target",
+      "cross_station_target"
+    ],
+    "locked_baseline_names": [
+      "persistence",
+      "seasonal_naive",
+      "seasonal_naive",
+      "seasonal_naive",
+      "seasonal_naive",
+      "persistence"
+    ]
+  }
+}
