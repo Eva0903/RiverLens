@@ -74,5 +74,4 @@ python run_study.py --experiment 01 --mode run
 - [Windows建立GitHub仓库教程](docs/GITHUB_GUIDE_ZH.md)
 - [数据与发布范围](docs/DATA_POLICY.md)
 - [源码来源与版本对应](docs/PROVENANCE.md)
-
-本包没有预设开源许可证。首次上传建议设为Private；作者确认代码权属与共享方式后，再决定公开及许可证。参考[GitHub关于无许可证仓库的说明](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)。
+- 
